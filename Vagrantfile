@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
   #forwarded ports
   config.vm.network :forwarded_port, host: 8888, guest: 80
   config.vm.network :forwarded_port, host: 3306, guest: 3306
+  config.vm.network :forwarded_port, host: 9000, guest: 9000
 
   #starts provision
   config.vm.provision "run", type: "shell" do |s|
