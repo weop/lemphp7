@@ -64,7 +64,7 @@ class php {
 	}
 
 	exec { 'apt-get update && purge php 5':
-		command => 'sudo apt-get update && sudo apt-get purge php5-fpm && sudo apt-get --purge autoremove',
+		command => 'sudo apt-get update && sudo apt-get purge php5-fpm -y && sudo apt-get --purge autoremove -y',
 		path    => ['/bin', '/usr/bin'],
 		require => Exec['apt-add ondrej/php'],
 	}
