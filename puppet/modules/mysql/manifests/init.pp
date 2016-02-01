@@ -23,12 +23,6 @@ class mysql {
     require => Service['mysql'];
   }
 
-  exec { 'importing app/sql.db':
-    command => 'pv -n /vagrant/app/db.sql | mysql -u root -proot -D localdb',
-    path    => ['/bin', '/usr/bin'],
-    require => Exec['create localdb']
-  }
-
   exec { 'create localdb':
     command => 'mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS localdb;"',
     path    => ['/bin', '/usr/bin'],

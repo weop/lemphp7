@@ -13,7 +13,7 @@ Vagrant is free and can be [downloaded here](http://www.vagrantup.com/).
 
 ## how do I run my app?
 
-Simply clone this git repository and run vagrant up. Note: Move your application to 'lemphp7/app' directory. Ensure that your database dump is named db.sql and is in the 'lemphp7/app' directory.
+Simply clone this git repository and run vagrant up. Note: Move your application to 'lemphp7/app' directory.
 
 To run the box.
 

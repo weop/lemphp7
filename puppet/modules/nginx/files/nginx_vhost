@@ -14,10 +14,6 @@ server {
       add_header Cache-Control "public";
   }
 
-  location ~* \.(?:ht|ini|sql|tar|gz|conf) {
-  		deny  all;
-  }
-
   gzip on;
   gzip_http_version  1.1;
   gzip_comp_level    5;
