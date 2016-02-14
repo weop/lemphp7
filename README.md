@@ -1,5 +1,5 @@
-# PHP7 Development Environment with XDEBUG
-LEMP Vagrant Box using Puppet. [ NGINX + MYSQL + PHP7 ]
+# PHP7 Development Environment with XDebug
+LEMP Vagrant Box using Puppet. [ NGINX + MYSQL + PHP7 ] + MongoDB
 
 This is a simple vagrant ubuntu/trusty64 box that includes all the essential puppet modules to run a LEMP development environment out of the box. XDebug 2.4 is also now included for debugging needs.
 

@@ -9,10 +9,16 @@ then
   echo "=-------------+...MySQL is Running...+---------------="
 fi
 
+if pgrep "mongod" > /dev/null
+then
+  echo "=-------------+..MongoDB is Running..+---------------="
+fi
+
 if pgrep "php" > /dev/null
 then
   echo "=-------------+...PHP7 is Running....+---------------="
 fi
+
 
 if pgrep "nginx" > /dev/null
 then

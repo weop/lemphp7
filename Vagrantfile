@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
 
   #box
   config.vm.provider "virtualbox" do |v|
-      v.name = "Php7 Dev"
+      v.name = "Php7 Dev2"
       v.customize ["modifyvm", :id, "--memory", "512"]
   end
 
@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, host: 8888, guest: 80, auto_correct: true
   config.vm.network :forwarded_port, host: 3306, guest: 3306, auto_correct: true
   config.vm.network :forwarded_port, host: 9000, guest: 9000, auto_correct: true
+  config.vm.network :forwarded_port, host: 20905, guest: 20905, auto_correct: true
 
   #starts provision
   config.vm.provision "run", type: "shell" do |s|
