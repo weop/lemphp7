@@ -70,7 +70,7 @@ class php {
 	}
 
 	exec { 'apt-add ondrej/php':
-		command => 'sudo apt-add-repository ppa:ondrej/php-7.0 -y',
+		command => 'sudo apt-add-repository ppa:ondrej/php -y',
 		path    => ['/bin', '/usr/bin'],
 		require => Exec['php pre-install tasks'],
 	}
