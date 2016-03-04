@@ -1,3 +1,4 @@
+
 class mysql {
 
   package { ['mysql-server']:
@@ -23,14 +24,10 @@ class mysql {
     require => Service['mysql'];
   }
 
-  exec { 'create localdb':
-    command => 'mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS localdb;"',
+  exec { "grant-root":
+    command => "mysql -uroot -proot -e \"GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'root';\"",
     path    => ['/bin', '/usr/bin'],
-    require => [
-      File['/etc/mysql/my.cnf'],
-      Exec['set-mysql-password'],
-      Service['mysql'],
-    ]
+    require => Exec["set-mysql-password"],
   }
 
 

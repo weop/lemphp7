@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
 
   #box
   config.vm.provider "virtualbox" do |v|
-      v.name = "Php7 Dev2"
+      v.name = "PHP7 Dev"
       v.customize ["modifyvm", :id, "--memory", "512"]
   end
 

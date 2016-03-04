@@ -27,15 +27,11 @@ The web server runs on the private network ip 192.168.11.22 and is accessible on
 http://localhost:8888/
 ```
 
-To manage mysql, connect via SSH tunnel.
+To manage mysql from your host machine, connect as:
 ```
 mysql host: 127.0.0.1
 mysql user: root
 mysql pass: root
-
-ssh host: 192.168.11.22
-ssh user: vagrant
-ssh pass: vagrant
 ```
 
 ## notes
